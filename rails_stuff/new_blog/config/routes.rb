@@ -1,6 +1,8 @@
 NewBlog::Application.routes.draw do
   get "welcome/index"
-  resources :posts
+ resources :posts do
+  resources :comments
+end
   #post GET    /posts/:id(.:format)      posts#show
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
